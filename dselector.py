@@ -24,7 +24,7 @@ import re
 from django.conf.urls import *
 defaults_all = [handler403, handler404, handler500, include, url]
 from django.conf.urls import url as _url
-from django.urls import RegexURLPattern, RegexURLResolver
+from django.urls import URLPattern, URLResolver
 
 import calendar
 
@@ -104,7 +104,7 @@ class Parser:
         for t in args:
             if isinstance(t, (list, tuple)):
                 t = self.url(prefix=prefix, *t)
-            elif isinstance(t, RegexURLPattern):
+            elif isinstance(t, URLPattern):
                 t.add_prefix(prefix)
             pattern_list.append(t)
         return pattern_list
