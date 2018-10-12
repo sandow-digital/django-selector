@@ -67,7 +67,7 @@ class Parser:
             default_autowrap = True
         self.autowrap = default_autowrap if autowrap is None else autowrap
         self.pattern_types = pattern_types.copy()
-        for key, val in extra_patterns.iteritems():
+        for key, val in extra_patterns.items():
             self.pattern_types[key] = val
 
     def register(self, name, regex):
