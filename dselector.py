@@ -22,7 +22,7 @@ becomes::
 
 import re
 from django.conf.urls import *
-defaults_all = [handler403, handler404, handler500, include, patterns, url]
+defaults_all = [handler403, handler404, handler500, include, url]
 from django.conf.urls import url as _url
 from django.core.urlresolvers import RegexURLPattern, RegexURLResolver
 
