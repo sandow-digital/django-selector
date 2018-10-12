@@ -109,10 +109,10 @@ class Parser:
             pattern_list.append(t)
         return pattern_list
 
-    def url(self, regex, view, kwargs=None, name=None, prefix=''):
+    def url(self, regex, view, kwargs=None, name=None):
         """A replacement for 'url' that understands named patterns."""
         regex = self.parse_pattern(regex)
-        return _url(regex, view, kwargs, name, prefix)
+        return _url(regex, view, kwargs, name)
 
 # instantiate Parser instance and expose default functions
 parser = Parser()
